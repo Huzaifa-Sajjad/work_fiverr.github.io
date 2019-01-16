@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script src="https://cdn.klokantech.com/osmnames/v1/autocomplete.js"></script>
+    <link href="https://cdn.klokantech.com/osmnames/v1/autocomplete.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input autocomplete="off" id="search" type="text" />
+    <script>
+      var autocomplete = new kt.OsmNamesAutocomplete(
+          'search', 'https://geocoder.tilehosting.com/', 'ESNMd35l8gaV5z3nrFxC');
+      autocomplete.registerCallback(function(item) {
+        alert(JSON.stringify(item, ' ', 2));
+      });
+    </script>
+  </body>
+</html>
